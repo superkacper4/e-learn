@@ -9,7 +9,7 @@ const StyledNav = styled.nav`
   top: 0;
   left: 0;
   right: 0;
-  height: 15%;
+  height: 10%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -18,9 +18,13 @@ const StyledNav = styled.nav`
 
 const StyledNavLink = styled(NavLink)`
   color: black;
-  font-size: 3.5rem;
+  font-size: 2rem;
   text-decoration: none;
   padding: 10px;
+
+  &.active {
+    color: #d6d6d6;
+  }
 `;
 
 const StyledLogo = styled(Logo)`
@@ -32,7 +36,9 @@ const Nav = () => {
     <StyledNav>
       <StyledLogo />
       <div>
-        <StyledNavLink to="/">Start</StyledNavLink>
+        <StyledNavLink exact to="/">
+          Start
+        </StyledNavLink>
         <StyledNavLink to="/learn">Learn</StyledNavLink>
       </div>
     </StyledNav>
