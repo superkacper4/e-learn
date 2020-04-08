@@ -10,6 +10,8 @@ const StyledWrapper = styled(Wrapper)`
   padding: 10px 1%;
   position: relative;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 // const StyledDiv = styled.div`
@@ -26,6 +28,7 @@ const StyledWrapper = styled(Wrapper)`
 const StyledImg = styled.img`
   /* z-index: 2; */
   height: 500px;
+  width: 250px;
   /* flex-basis: 40%; */
   /* position: relative;
     top: 10%;

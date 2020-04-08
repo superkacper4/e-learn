@@ -5,6 +5,7 @@ const Wrapper = styled.section`
   padding-top: 15%;
   background-color: #d6d6d6;
   display: flex;
+  flex-wrap: wrap;
 `;
 
 export default Wrapper;
