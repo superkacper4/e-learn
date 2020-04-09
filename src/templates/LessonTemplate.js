@@ -1,15 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
 import Wrapper from 'atoms/Wrapper';
+import H2 from 'atoms/H2';
+import P from 'atoms/P';
+import Img from 'atoms/Img';
 
 const StyledWrapper = styled(Wrapper)`
   flex-basis: 100%;
 `;
 
-const LearnPage = () => {
+const LearnPage = ({ clickedChapter, subjects }) => {
   return (
     <StyledWrapper>
-      <h2>Strona Lesssnono sdfjkl</h2>
+      {subjects
+        .filter((subject) => subject.title === clickedChapter)
+        .map((subject) => {
+          return (
+            <>
+              <H2>{subject.title}</H2>
+              <P>{subject.content}</P>
+              <Img src={subject.img} />
+              <P>{subject.secondContent}</P>
+            </>
+          );
+        })}
     </StyledWrapper>
   );
 };

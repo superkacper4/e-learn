@@ -16,34 +16,7 @@ const StyledLearnChaptersItem = styled.button`
   background-color: transparent;
 `;
 
-const subjects = [
-  {
-    key: 0,
-    title: 'To Be',
-  },
-  {
-    key: 1,
-    title: 'Or not to be',
-  },
-  {
-    key: 2,
-    title: 'Present Simple',
-  },
-  {
-    key: 3,
-    title: 'Present Continous',
-  },
-  {
-    key: 4,
-    title: 'Present Past ',
-  },
-  {
-    key: 5,
-    title: 'Present Perfect',
-  },
-];
-
-const LearnChaptersNav = ({ setClickedChapter }) => {
+const LearnChaptersNav = ({ setClickedChapter, subjects }) => {
   const onPress = (value) => {
     setClickedChapter(value);
   };
