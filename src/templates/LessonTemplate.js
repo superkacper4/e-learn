@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Test from 'organisms/Test';
 import Wrapper from 'atoms/Wrapper';
 import H2 from 'atoms/H2';
 import P from 'atoms/P';
@@ -21,6 +22,7 @@ const LearnPage = ({ clickedChapter, subjects }) => {
               <P>{subject.content}</P>
               <Img src={subject.img} />
               <P>{subject.secondContent}</P>
+              <Test questions={subject.test} />
             </>
           );
         })}
