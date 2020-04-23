@@ -5,7 +5,7 @@ import Questions from 'molecules/Questions';
 
 const StyledTest = styled.form`
   flex-basis: 100%;
-  background-color: lightgreen;
+  background-color: #777;
   display: flex;
   flex-direction: column;
 `;

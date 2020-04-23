@@ -12,21 +12,21 @@ const StyledWrapper = styled(Wrapper)`
 
 const LearnPage = ({ clickedChapter, subjects }) => {
   return (
-    <StyledWrapper>
+    <>
       {subjects
         .filter((subject) => subject.title === clickedChapter)
         .map((subject) => {
           return (
-            <>
+            <StyledWrapper key={subject.key}>
               <H2>{subject.title}</H2>
               <P>{subject.content}</P>
               <Img src={subject.img} />
               <P>{subject.secondContent}</P>
               <Test questions={subject.test} />
-            </>
+            </StyledWrapper>
           );
         })}
-    </StyledWrapper>
+    </>
   );
 };
 
