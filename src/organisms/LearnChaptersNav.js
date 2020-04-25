@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+
+const StyledHideBar = styled.button`
+  width: 100%;
+  height: 5vh;
+  font-size: 2.5rem;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: grey;
+`;
 
 const StyledLearnChaptersNav = styled.div`
   background-color: #8a6d6d;
   padding: 0;
   flex-basis: 100%;
-  padding-top: 10%;
+  transition: 0.5s;
+  transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-200px)')};
+  position: absolute;
+  top: 15vh;
+  left: 0;
 `;
 const StyledLearnChaptersItem = styled.button`
   width: 100%;
@@ -17,17 +32,23 @@ const StyledLearnChaptersItem = styled.button`
 `;
 
 const LearnChaptersNav = ({ setClickedChapter, subjects }) => {
+  const [open, setOpen] = useState(false);
+
   const onPress = (value) => {
     setClickedChapter(value);
+    setOpen(!open);
   };
   return (
-    <StyledLearnChaptersNav>
-      {subjects.map((subject) => (
-        <StyledLearnChaptersItem key={subject.key} onClick={() => onPress(subject.title)}>
-          {subject.title}
-        </StyledLearnChaptersItem>
-      ))}
-    </StyledLearnChaptersNav>
+    <>
+      <StyledHideBar onClick={() => setOpen(!open)}>Rozwiń</StyledHideBar>
+      <StyledLearnChaptersNav open={open}>
+        {subjects.map((subject) => (
+          <StyledLearnChaptersItem key={subject.key} onClick={() => onPress(subject.title)}>
+            {subject.title}
+          </StyledLearnChaptersItem>
+        ))}
+      </StyledLearnChaptersNav>
+    </>
   );
 };
 

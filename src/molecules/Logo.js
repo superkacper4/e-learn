@@ -13,7 +13,11 @@ const StyledLogo = styled(Link)`
 `;
 
 const Logo = () => {
-  return <StyledLogo to="/">E-learn</StyledLogo>;
+  return (
+    <StyledLogo onClick={() => window.scroll(0, 0)} to="/">
+      E-learn
+    </StyledLogo>
+  );
 };
 
 export default Logo;

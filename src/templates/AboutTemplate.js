@@ -7,7 +7,7 @@ import H3 from 'atoms/H3';
 import P from 'atoms/P';
 
 const StyledWrapper = styled(Wrapper)`
-  padding: 10px 1%;
+  margin: 0;
   position: relative;
   flex-direction: column;
   justify-content: center;

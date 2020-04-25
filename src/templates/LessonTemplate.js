@@ -7,6 +7,7 @@ import P from 'atoms/P';
 import Img from 'atoms/Img';
 
 const StyledWrapper = styled(Wrapper)`
+  margin: 10px 0;
   flex-basis: 100%;
 `;
 

@@ -10,7 +10,6 @@ const StyledQuestions = styled.div`
   flex-basis: 100%;
   margin: 5px 0;
   display: block;
-  font-size: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   transform: ${({ id, i }) => {
@@ -24,11 +23,25 @@ const StyledCheckbox = styled.input`
   border: 1px solid black;
 `;
 
+const StyledButton = styled.button`
+  background-color: black;
+  color: #d4b8b8;
+  font-size: 1.8rem;
+  border: none;
+  padding: 10px;
+  margin: 10px auto;
+`;
+
 const Questions = ({ value, i, score, setScore }) => {
   const [a1, setA1] = useState(false);
   const [a2, setA2] = useState(false);
   const [a3, setA3] = useState(false);
   const [a4, setA4] = useState(false);
+
+  const [green1, setGreen1] = useState(false);
+  const [green2, setGreen2] = useState(false);
+  const [green3, setGreen3] = useState(false);
+  const [green4, setGreen4] = useState(false);
 
   const [disable, setDisable] = useState(false);
 
@@ -42,6 +55,18 @@ const Questions = ({ value, i, score, setScore }) => {
       console.log('źle');
     }
 
+    if (C[0]) setGreen1(true);
+    else setGreen1(false);
+
+    if (C[1]) setGreen2(true);
+    else setGreen2(false);
+
+    if (C[2]) setGreen3(true);
+    else setGreen3(false);
+
+    if (C[3]) setGreen4(true);
+    else setGreen4(false);
+
     console.log(a1, a2, a3, a4);
   };
 
@@ -50,7 +75,7 @@ const Questions = ({ value, i, score, setScore }) => {
       {value.map(({ Q, A1, A2, A3, A4, id, C }) => (
         <StyledQuestions key={Q} id={id} i={i}>
           <P>{Q}</P>
-          <Label>
+          <Label green={green1}>
             <StyledCheckbox
               type="checkbox"
               chekced={a1}
@@ -59,7 +84,7 @@ const Questions = ({ value, i, score, setScore }) => {
             />{' '}
             {A1}
           </Label>
-          <Label>
+          <Label green={green2}>
             <StyledCheckbox
               type="checkbox"
               chekced={a2}
@@ -68,7 +93,7 @@ const Questions = ({ value, i, score, setScore }) => {
             />{' '}
             {A2}
           </Label>
-          <Label>
+          <Label green={green3}>
             <StyledCheckbox
               type="checkbox"
               chekced={a3}
@@ -77,7 +102,7 @@ const Questions = ({ value, i, score, setScore }) => {
             />{' '}
             {A3}
           </Label>
-          <Label>
+          <Label green={green4}>
             <StyledCheckbox
               type="checkbox"
               chekced={a4}
@@ -86,9 +111,9 @@ const Questions = ({ value, i, score, setScore }) => {
             />{' '}
             {A4}
           </Label>
-          <button type="submit" onClick={(e) => handleButton(e, C)}>
+          <StyledButton type="submit" onClick={(e) => handleButton(e, C)}>
             Sprawdź
-          </button>
+          </StyledButton>
         </StyledQuestions>
       ))}
     </>
