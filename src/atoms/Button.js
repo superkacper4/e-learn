@@ -17,8 +17,16 @@ const StyledButton = styled.button`
   }
 `;
 
-const Button = ({ children, black }) => {
-  return <StyledButton black={black}>{children}</StyledButton>;
+const Button = ({ children, black, fn }) => {
+  const buttonFn = (e) => {
+    e.preventDefault();
+    fn();
+  };
+  return (
+    <StyledButton black={black} fn={fn} onClick={buttonFn}>
+      {children}
+    </StyledButton>
+  );
 };
 
 export default Button;
