@@ -4,9 +4,11 @@ import H3 from 'atoms/H3';
 import H4 from 'atoms/H4';
 import Button from 'atoms/Button';
 import Questions from 'molecules/Questions';
+import { breakpoints } from 'theme/breakpoints';
 
 const StyledTest = styled.form`
   flex-basis: 100%;
+  width: 100%;
   background-color: #d4b8b8;
   display: flex;
   flex-direction: column;
@@ -15,6 +17,20 @@ const StyledTest = styled.form`
 const StyledSlider = styled.div`
   position: relative;
   height: 270px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  @media ${breakpoints.mobileL} {
+    height: 300px;
+  }
+
+  @media ${breakpoints.laptop} {
+    width: 60%;
+    margin: auto;
+  }
 `;
 
 const Test = ({ questions }) => {

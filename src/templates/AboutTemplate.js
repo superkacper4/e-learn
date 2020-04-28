@@ -8,6 +8,7 @@ import P from 'atoms/P';
 
 const StyledWrapper = styled(Wrapper)`
   margin: 0;
+  padding: 20px 0;
   position: relative;
   flex-direction: column;
   justify-content: center;

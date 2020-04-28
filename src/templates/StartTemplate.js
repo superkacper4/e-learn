@@ -12,6 +12,7 @@ const StyledWrapper = styled(Wrapper)`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 90vh;
 
   /* &::before {
     content: '';

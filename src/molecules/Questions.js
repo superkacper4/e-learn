@@ -7,11 +7,12 @@ const StyledQuestions = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  flex-basis: 100%;
+  width: 100%;
   margin: 5px 0;
-  display: block;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
   transform: ${({ id, i }) => {
     if (id === i) return 'scale(1)';
     return 'scale(0)';

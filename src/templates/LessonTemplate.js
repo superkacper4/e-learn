@@ -9,6 +9,8 @@ import Img from 'atoms/Img';
 const StyledWrapper = styled(Wrapper)`
   margin: 10px 0;
   flex-basis: 100%;
+  display: flex;
+  justify-content: center;
 `;
 
 const LearnPage = ({ clickedChapter, subjects }) => {

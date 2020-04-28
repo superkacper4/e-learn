@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import Logo from 'molecules/Logo';
+import { breakpoints } from 'theme/breakpoints';
 
 const StyledNav = styled.nav`
   background-color: #cf7a7a;
@@ -24,6 +25,10 @@ const StyledNavLink = styled(NavLink)`
 
   &.active {
     color: #d6d6d6;
+  }
+
+  @media ${breakpoints.tablet} {
+    font-size: 2.5rem;
   }
 `;
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { breakpoints } from 'theme/breakpoints';
 
 const StyledHideBar = styled.button`
   width: 100%;
@@ -7,28 +8,38 @@ const StyledHideBar = styled.button`
   font-size: 2.5rem;
   z-index: 2;
   margin: 0;
-  padding: 0;
   border: none;
-  background-color: grey;
+  border-bottom: solid 1px black;
+  background-color: #8a6d6d;
+  @media ${breakpoints.tablet} {
+    font-size: 3.5rem;
+    height: 7vh;
+  }
 `;
 
 const StyledLearnChaptersNav = styled.div`
   background-color: #8a6d6d;
   padding: 0;
-  flex-basis: 100%;
+  width: 100%;
   transition: 0.5s;
   transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-200px)')};
   position: absolute;
   top: 15vh;
   left: 0;
+
+  @media ${breakpoints.tablet} {
+    top: 17vh;
+  }
 `;
 const StyledLearnChaptersItem = styled.button`
   width: 100%;
   border: none;
-  margin: 0 0 10px 0;
   border-bottom: solid 1px black;
   font-size: 2.5rem;
   background-color: transparent;
+  @media ${breakpoints.tablet} {
+    font-size: 3rem;
+  }
 `;
 
 const LearnChaptersNav = ({ setClickedChapter, subjects }) => {

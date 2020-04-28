@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Wrapper from 'atoms/Wrapper';
 import LearnChaptersNav from 'organisms/LearnChaptersNav';
 import LessonTemplate from 'templates/LessonTemplate';
+import Loader from 'atoms/Loader';
 import toBeImg from 'assets/tobe.jpg';
 import orNotToBeImg from 'assets/ornottobe.jpg';
 
@@ -188,6 +189,7 @@ const LearnPage = () => {
   const [clickedChapter, setClickedChapter] = useState('To Be');
   return (
     <Wrapper>
+      <Loader />
       <LearnChaptersNav setClickedChapter={setClickedChapter} subjects={subjects} />
       <LessonTemplate clickedChapter={clickedChapter} subjects={subjects} />
     </Wrapper>
