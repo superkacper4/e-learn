@@ -12,14 +12,16 @@ const StyledButton = styled.button`
   cursor: pointer;
   margin: 10px auto;
 
-  &:hover {
-    background-color: ${({ black }) => (black ? 'black' : 'white')};
-    color: ${({ black }) => (black ? 'white' : 'black')};
-  }
-
   @media ${breakpoints.tablet} {
     width: 250px;
     font-size: 3rem;
+  }
+
+  @media ${breakpoints.laptop} {
+    &:hover {
+      background-color: ${({ black }) => (black ? 'black' : 'white')};
+      color: ${({ black }) => (black ? 'white' : 'black')};
+    }
   }
 `;
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Label from 'atoms/Label';
 import P from 'atoms/P';
+import { breakpoints } from 'theme/breakpoints';
 
 const StyledQuestions = styled.div`
   position: absolute;
@@ -31,6 +32,16 @@ const StyledButton = styled.button`
   border: none;
   padding: 10px;
   margin: 10px auto;
+  border: 1px solid black;
+  transition: background-color 0.5s, color 0.5s;
+
+  @media ${breakpoints.laptop} {
+    cursor: pointer;
+    &:hover {
+      background-color: transparent;
+      color: black;
+    }
+  }
 `;
 
 const Questions = ({ value, i, score, setScore }) => {
@@ -112,7 +123,11 @@ const Questions = ({ value, i, score, setScore }) => {
             />{' '}
             {A4}
           </Label>
-          <StyledButton type="submit" onClick={(e) => handleButton(e, C)}>
+          <StyledButton
+            type="submit"
+            onClick={(e) => handleButton(e, C)}
+            disabled={disable ? 'disabled' : null}
+          >
             Sprawdź
           </StyledButton>
         </StyledQuestions>

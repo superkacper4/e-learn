@@ -8,9 +8,17 @@ const StyledLabel = styled.label`
   border-bottom: solid 1px black;
   padding: 10px;
   background-color: ${({ green }) => (green ? '#8bc95b' : 'transparent')};
+  transition: background-color 0.5s;
 
   @media ${breakpoints.mobileL} {
     font-size: 2.3rem;
+  }
+
+  @media ${breakpoints.laptop} {
+    cursor: pointer;
+    &:hover {
+      background-color: #e3d1d1;
+    }
   }
 `;
 

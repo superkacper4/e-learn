@@ -10,7 +10,7 @@ const StyledNav = styled.nav`
   top: 0;
   left: 0;
   right: 0;
-  height: 10%;
+  height: 10vh;
   display: flex;
   justify-content: space-around;
   align-items: center;

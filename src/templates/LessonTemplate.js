@@ -5,12 +5,19 @@ import Wrapper from 'atoms/Wrapper';
 import H2 from 'atoms/H2';
 import P from 'atoms/P';
 import Img from 'atoms/Img';
+import { breakpoints } from 'theme/breakpoints';
 
 const StyledWrapper = styled(Wrapper)`
-  margin: 10px 0;
+  margin: 0;
   flex-basis: 100%;
   display: flex;
   justify-content: center;
+
+  @media ${breakpoints.laptop} {
+    flex-basis: 70%;
+    margin-left: 30%;
+    margin-top: 0;
+  }
 `;
 
 const LearnPage = ({ clickedChapter, subjects }) => {
