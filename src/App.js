@@ -7,7 +7,7 @@ import Nav from 'organisms/Nav';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <>
         <GlobalStyle />
         <Nav />
