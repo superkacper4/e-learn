@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.js": "/e-learn/static/js/main.bb99adb5.chunk.js",
+    "main.js.map": "/e-learn/static/js/main.bb99adb5.chunk.js.map",
+    "runtime-main.js": "/e-learn/static/js/runtime-main.7f725bd9.js",
+    "runtime-main.js.map": "/e-learn/static/js/runtime-main.7f725bd9.js.map",
+    "static/js/2.0c0b17db.chunk.js": "/e-learn/static/js/2.0c0b17db.chunk.js",
+    "static/js/2.0c0b17db.chunk.js.map": "/e-learn/static/js/2.0c0b17db.chunk.js.map",
+    "index.html": "/e-learn/index.html",
+    "precache-manifest.2d3e0268e1318246a4d31ef839851d67.js": "/e-learn/precache-manifest.2d3e0268e1318246a4d31ef839851d67.js",
+    "service-worker.js": "/e-learn/service-worker.js",
+    "static/js/2.0c0b17db.chunk.js.LICENSE.txt": "/e-learn/static/js/2.0c0b17db.chunk.js.LICENSE.txt",
+    "static/media/me.png": "/e-learn/static/media/me.855be58f.png",
+    "static/media/ornottobe.jpg": "/e-learn/static/media/ornottobe.8959d7d3.jpg",
+    "static/media/pastsimple.jpg": "/e-learn/static/media/pastsimple.3c5954bd.jpg",
+    "static/media/presentsimple.jpg": "/e-learn/static/media/presentsimple.2b9e8cd0.jpg",
+    "static/media/start.jpg": "/e-learn/static/media/start.8acd815c.jpg",
+    "static/media/tobe.jpg": "/e-learn/static/media/tobe.7f893ce4.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7f725bd9.js",
+    "static/js/2.0c0b17db.chunk.js",
+    "static/js/main.bb99adb5.chunk.js"
+  ]
+}
