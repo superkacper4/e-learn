@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/e-learn/static/js/main.8c87d976.chunk.js",
-    "main.js.map": "/e-learn/static/js/main.8c87d976.chunk.js.map",
+    "main.js": "/e-learn/static/js/main.059ac3a6.chunk.js",
+    "main.js.map": "/e-learn/static/js/main.059ac3a6.chunk.js.map",
     "runtime-main.js": "/e-learn/static/js/runtime-main.7f725bd9.js",
     "runtime-main.js.map": "/e-learn/static/js/runtime-main.7f725bd9.js.map",
     "static/js/2.0c0b17db.chunk.js": "/e-learn/static/js/2.0c0b17db.chunk.js",
     "static/js/2.0c0b17db.chunk.js.map": "/e-learn/static/js/2.0c0b17db.chunk.js.map",
     "index.html": "/e-learn/index.html",
-    "precache-manifest.a7c3b66dbedd865f1b35ef12faed0c6f.js": "/e-learn/precache-manifest.a7c3b66dbedd865f1b35ef12faed0c6f.js",
+    "precache-manifest.6efea54dd47f4609cca65a5d2bf506fb.js": "/e-learn/precache-manifest.6efea54dd47f4609cca65a5d2bf506fb.js",
     "service-worker.js": "/e-learn/service-worker.js",
     "static/js/2.0c0b17db.chunk.js.LICENSE.txt": "/e-learn/static/js/2.0c0b17db.chunk.js.LICENSE.txt",
     "static/media/me.png": "/e-learn/static/media/me.855be58f.png",
@@ -20,6 +20,6 @@
   "entrypoints": [
     "static/js/runtime-main.7f725bd9.js",
     "static/js/2.0c0b17db.chunk.js",
-    "static/js/main.8c87d976.chunk.js"
+    "static/js/main.059ac3a6.chunk.js"
   ]
 }
