@@ -14,7 +14,7 @@ I watned to do more advanced website and to practise my skills in general. I tri
 * JavaScript
 
 ## Setup
-You need to swtich to development branch and then cd/e-learn and npm start.
+Just click the link: https://superkacper4.github.io/e-learn/
 
 ## Features
 I am planning to do:
